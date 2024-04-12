@@ -8,8 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: say hi
-        run: echo "hi"
+      - uses: actions/checkout@v3
 
-      - name: check time
-        run: echo $(date)
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+
+      - name: check that python works
+        run: python --version
