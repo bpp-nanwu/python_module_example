@@ -17,7 +17,8 @@ dev = [
     "black",
     "flake8",
     "pytest",
-    "coverage"
+    "coverage",
+    "mypy"
 ]
 
 visual = [
