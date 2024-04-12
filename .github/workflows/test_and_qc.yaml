@@ -5,7 +5,12 @@ on:
 
 jobs:
   my_first_job:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest ]
+        py: [ '3.9', '3.12' ]
+
+    runs-on:  ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v3
@@ -13,7 +18,7 @@ jobs:
       - name: Set up Python 3.12
         uses: actions/setup-python@v4
         with:
-          python-version: 3.12
+          python-version: ${{ matrix.py }}
 
       - name: install project
         run: pip install .[dev]
@@ -21,10 +26,3 @@ jobs:
       - name: do quality check
         run: python -m flake8 minimuh
 
-  second_job:
-    runs-on: ubuntu-latest
-    needs: [my_first_job]
-
-    steps:
-      - name: congratulate
-        run: echo "good job!"
