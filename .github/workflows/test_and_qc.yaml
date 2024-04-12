@@ -16,4 +16,4 @@ jobs:
           python-version: 3.12
 
       - name: check that python works
-        run: python --version
+        run: python -m flake8 minimuh
