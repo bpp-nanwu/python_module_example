@@ -1,4 +1,4 @@
-name: build
+name: try
 
 on:
   push:
