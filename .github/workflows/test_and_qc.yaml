@@ -7,8 +7,8 @@ jobs:
   my_first_job:
     strategy:
       matrix:
-        os: [ ubuntu-latest, windows-latest ]
-        py: [ '3.11', '3.12' ]
+        os: [ ubuntu-latest, ]
+        py: [ '3.12' ]
 
     runs-on:  ${{ matrix.os }}
 
@@ -25,4 +25,7 @@ jobs:
 
       - name: do quality check
         run: python -m flake8 minimuh
+
+      - name: test files
+        run: python -m pytest
 
