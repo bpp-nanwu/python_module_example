@@ -15,5 +15,8 @@ jobs:
         with:
           python-version: 3.12
 
-      - name: check that python works
-        run: python -m flake8 minimuh
+      - name: install project
+        run: pip install .
+
+      - name: do quality check
+        run: python -m flake minimuh
