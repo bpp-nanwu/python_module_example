@@ -18,6 +18,11 @@ dev = [
     "flake8"
 ]
 
+visual = [
+    "matplotlib"
+]
+
+
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
