@@ -16,7 +16,8 @@ dependencies = [
 dev = [
     "black",
     "flake8",
-    "pytest"
+    "pytest",
+    "coverage"
 ]
 
 visual = [
