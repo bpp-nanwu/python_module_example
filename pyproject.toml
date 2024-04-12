@@ -1,0 +1,20 @@
+[project]
+name = "minimuh"
+version = "0.1.0"
+description = "good stuff"
+authors = [
+  {name = "Nan", email = "nan@bluepp.dk" }
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+dependencies = [
+
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["demo", "tests"]
