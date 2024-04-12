@@ -1,5 +1,6 @@
 import numpy
 
+
 def cow_say(text):
     return f"im cow: {text}"
 
