@@ -4,9 +4,12 @@ on:
   push:
 
 jobs:
-  build:
+  my_job_name:
     runs-on: ubuntu-latest
 
     steps:
       - name: say hi
         run: echo "hi"
+
+      - name: check time
+        run: echo $(date)
